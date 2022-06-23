@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "name": "Adventurer 4",
+    "inherits": "flashforge_base",
+    "metadata": {
+        "visible": true,
+        "author": "NinjaAsok",
+        "manufacturer": "Flashforge",
+        "file_formats": "text/x-gcode",
+        "platform": "flashforge_adventurer_4.stl",
+        "platform_offset": [0, -15, 0],
+        "quality_definition": "flashforge_base"
+    },
+
+    "overrides": {
+        "machine_name": { "default_value": "Adventurer 4" },
+        "retraction_amount": { "default_value": 5.0 },
+        "retraction_speed": { "default_value": 25 },
+        "machine_width": {"default_value": 224},
+        "machine_height": {"default_value": 250},
+        "machine_depth": {"default_value": 204},
+        "machine_center_is_zero": {"default_value": true},
+        "machine_head_with_fans_polygon":{"default_value": [[ -20, -10 ],[ -20, 10 ],[ 10, 10 ],[ 10, -10 ]]
+        },
+        "gantry_height": {"value": "250"},
+
+
+        "machine_gcode_flavor": {"default_value": "RepRap (Marlin/Sprinter)"},
+        "machine_start_gcode": {"default_value": "G28\nG1 Z15.0 F6000\nM651\nG92 E0\nG1 F200 E3\nG92 E0"},
+        "machine_end_gcode": {"default_value": "M104 S0 T0\nM140 S0 T0\nG162 Z F1800\nG28 X Y\nM132 X Y A B\nM652\nG91\nM18"
+        }
+    }
+}
